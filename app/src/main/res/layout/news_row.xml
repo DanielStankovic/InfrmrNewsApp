@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        app:cardCornerRadius="5dp"
+        android:elevation="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/dateView"
+            android:alpha="0.8"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" >
+
+            <TextView
+                android:id="@+id/date"
+                android:background="@android:color/holo_green_dark"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="March 7, 2018" />
+
+        </android.support.v7.widget.CardView>
+        
+        <RelativeLayout
+            android:padding="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/newsImageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/fourthcourse" />
+
+            <TextView
+                android:id="@+id/newsTitle"
+                android:layout_below="@id/newsImageId"
+                android:text="Title"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/author"
+                android:layout_below="@id/newsTitle"
+                android:text="Author: Daniel Stankovic"
+                android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/descriptionNews"
+                android:layout_below="@id/author"
+                android:text="News goes here... "
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
